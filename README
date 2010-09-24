@@ -1,0 +1,14 @@
+
+This project consists of an Emacs configuration with ErgoEmacs and plugins used with Rails developments
+
+Usage
+-----
+
+The following command will replace your .emacs file. Make sure your don't have any directories ~/.emacs.d or ~/.elisp
+
+$ ./install.sh
+
+ 
+
+
+

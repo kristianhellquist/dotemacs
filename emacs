@@ -135,6 +135,8 @@
 (global-set-key (kbd "M-9") 'kill-whole-line) 
 (global-set-key (kbd "M-4") 'goto-line)
 (global-set-key (kbd "M-.") 'repeat)
+(global-set-key (kbd "C-t") 'transpose-chars)
+(global-set-key (kbd "M-t") 'transpose-words)
 
 ;; Reclaim keys
 (defun my-orgtbl-mode-hook () 

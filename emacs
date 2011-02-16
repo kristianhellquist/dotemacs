@@ -81,7 +81,8 @@
 
 ;; ruby tweaks, don't insert encoding-magic-comment by default
 (setq-default ruby-insert-encoding-magic-comment nil)
-
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode)))
 
 
 ;; Functions

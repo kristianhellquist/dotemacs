@@ -204,3 +204,6 @@ by using nxml's indentation rules."
     (kill-region beg end)
     (next-line)
     ))
+;; Delete trailing whitespace before save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+

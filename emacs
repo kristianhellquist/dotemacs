@@ -207,5 +207,13 @@ by using nxml's indentation rules."
 ;; Delete trailing whitespace before save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward "0123456789")
+  (or (looking-at "[0123456789]+")
+      (error "No number at point"))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+(global-set-key (kbd "C-c C-+") 'increment-number-at-point)
+
 ;; buffer and file manipulation
 (load-library "steveyegge.el")

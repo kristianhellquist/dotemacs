@@ -1,3 +1,4 @@
+; -*- mode: lisp -*-
 (defun make-local-hook (&rest args))
 (setq visible-bell t)
 (setq make-backup-files nil)
@@ -38,24 +39,6 @@
 (setq yas/root-directory '("~/.emacs.d/plugins/yasnippet/snippets"
                            "~/.emacs.d/mysnippets"))
 (mapc 'yas/load-directory yas/root-directory)
-
-
-;; (custom-set-variables
-;;  ;; custom-set-variables was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  ;; '(ns-alternate-modifier (quote none))
-;;  ;; '(ns-command-modifier (quote meta))
-;;  '(standard-indent 2))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
-
-
 
 ;; Navigate between windows by using shift and arrow-keys
 (when (fboundp 'windmove-default-keybindings)
@@ -192,4 +175,12 @@ by using nxml's indentation rules."
 (server-start)
 
 
+;; Ack
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
 
+;; ace-jump
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)

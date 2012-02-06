@@ -184,3 +184,9 @@ by using nxml's indentation rules."
 ;; ace-jump
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+;; expand-region
+(add-to-list 'load-path "~/.emacs.d/vendor/expand-region.el")
+(require 'expand-region)
+(global-set-key (kbd "C-c f") 'er/expand-region)
+(global-set-key (kbd "C-c C-f") 'er/expand-region)
